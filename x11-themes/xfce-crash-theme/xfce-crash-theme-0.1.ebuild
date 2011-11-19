@@ -6,7 +6,7 @@ EAPI="3"
 
 DESCRIPTION="Dark GTK+2 theme for Xfce"
 HOMEPAGE="http://xfce-look.org/content/show.php?content=129706"
-SRC_URI="http://7clams.org/flora/distfiles/${P}.tar.bz2"
+SRC_URI="http://7clams.org/distfiles/p4-overlay/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
