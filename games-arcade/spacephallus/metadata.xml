@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer>
+  		<email>p@7clams.org</email>
+		<name>p4</name>
+	</maintainer>
+	<longdescription lang="en">
+		Space Phallus is a fun shoot-em-up with a retro 8-bit theme.
+		You control the disembodied head of a dog, and fight against
+		hordes of evil space penises.
+	</longdescription>
+</pkgmetadata>
