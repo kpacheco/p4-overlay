@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <layman>
-  <overlay contact="p@7clams.org"name="p4-overlay" src="https://github.com/p4ch3c0/p4-overlay" status="unofficial" type="git">
+  <overlay contact="p@7clams.org"name="p4-overlay" src="git://github.com/p4ch3c0/p4-overlay.git" status="unofficial" type="git">
     <link>http://github.com/p4ch3c0/p4-overlay</link>
     <description>Funtoo overlay for things I use that aren't worthy of inclusion in flora</description>
   </overlay>
