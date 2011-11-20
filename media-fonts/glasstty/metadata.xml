@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer>
+  		<email>p@7clams.org</email>
+		<name>p4</name>
+	</maintainer>
+	<longdescription lang="en">
+		Glass TTY VT220 is a TrueType font that mimics the look of a
+		DEC VT220 terminal.
+	</longdescription>
+</pkgmetadata>
