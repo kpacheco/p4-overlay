@@ -8,7 +8,8 @@ inherit games
 
 DESCRIPTION="Fun shoot-em-up with a retro 8 bit theme"
 HOMEPAGE="http://www.charliesgames.com/wordpress/?page_id=18"
-SRC_URI="http://www.charliesgames.com/phallus/SpacePhallusLinux.tar.gz"
+SRC_URI="http://7clams.org/distfiles/p4-overlay/SpacePhallusLinux.tar.gz
+	http://www.charliesgames.com/phallus/SpacePhallusLinux.tar.gz"
 
 LICENSE=""
 SLOT="0"
