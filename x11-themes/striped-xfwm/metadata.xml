@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer>
+  		<email>p@7clams.org</email>
+		<name>p4</name>
+	</maintainer>
+	<longdescription lang="en">
+		Striped for Xfwm4 is a port of lassekongo83's theme of the same
+		name for the Emerald window manager.
+	</longdescription>
+	<use>
+		<flag name="gtk">Install Striped GTK+-2 theme modified to work with Xfce panel</flag>
+	</use>
+</pkgmetadata>
