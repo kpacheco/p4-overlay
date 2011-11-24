@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer>
+  		<email>p@7clams.org</email>
+		<name>p4</name>
+	</maintainer>
+	<longdescription lang="en">
+		Fixedsys Excelsior is an unofficial pan-Unicode extension of
+		the classic Microsoft font Fixedsys.
+	</longdescription>
+</pkgmetadata>
