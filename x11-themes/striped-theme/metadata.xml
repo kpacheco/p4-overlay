@@ -6,10 +6,12 @@
 		<name>p4</name>
 	</maintainer>
 	<longdescription lang="en">
-		Striped for Xfwm4 is a port of lassekongo83's theme of the same
-		name for the Emerald window manager.
+		This is a port of lassekongo83's Striped VS originally made for
+		Windows XP. The package includes optional ports for Emerald and
+		Xfwm.
 	</longdescription>
 	<use>
-		<flag name="gtk">Install Striped GTK+-2 theme modified to work with Xfce panel</flag>
+		<flag name="emerald">Install the Emerald theme.</flag>
+		<flag name="xfce">Install the Xfwm theme.</flag>
 	</use>
 </pkgmetadata>
