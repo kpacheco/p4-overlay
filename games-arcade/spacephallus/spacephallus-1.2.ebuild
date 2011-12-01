@@ -13,7 +13,7 @@ SRC_URI="http://7clams.org/distfiles/p4-overlay/SpacePhallusLinux.tar.gz
 
 LICENSE=""
 SLOT="0"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="-* ~x86 ~amd64"
 IUSE=""
 RESTRICT="mirror strip"
 
