@@ -12,7 +12,7 @@ SRC_URI="binding-of-isaac_${PV}_i386.tar.gz"
 
 LICENSE=""
 SLOT="0"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="-* ~x86 ~amd64"
 IUSE=""
 RESTRICT="fetch strip"
 
