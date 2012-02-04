@@ -6,12 +6,12 @@ EAPI="3"
 
 inherit games
 
-DESCRIPTION="Fun shoot-em-up with a retro 8 bit theme"
+DESCRIPTION="Fun shoot-em-up with a retro 8-bit theme"
 HOMEPAGE="http://www.charliesgames.com/wordpress/?page_id=18"
 SRC_URI="http://7clams.org/distfiles/p4-overlay/SpacePhallusLinux.tar.gz
 	http://www.charliesgames.com/phallus/SpacePhallusLinux.tar.gz"
 
-LICENSE=""
+LICENSE="as-is"
 SLOT="0"
 KEYWORDS="-* ~x86 ~amd64"
 IUSE=""
@@ -26,13 +26,15 @@ RDEPEND="media-libs/mesa
 		app-emulation/emul-linux-x86-xlibs
 		)"
 
-S="${WORKDIR}"/SpacePhallusLinux
+S=${WORKDIR}/SpacePhallusLinux
+dir=/opt/charliesgames/phallus
 
 src_install() {
-	newgamesbin  "Space Phallus" "${PN}" || die
-	dodoc Readme.txt || die
-	newicon phalluslogo.png "${PN}".png
-	make_desktop_entry "${PN}" "Space Phallus" "${PN}" "Game;ArcadeGame" "Comment=${DESCRIPTION}"
+	mkdir -p ${D}/${dir}
+	mv "Space Phallus" ${D}/${dir}/spacephallus || die
+	dodoc Readme.txt
+	doicon phalluslogo.png
+	make_desktop_entry "${dir}/spacephallus" "Space Phallus" "phalluslogo" "Game;ArcadeGame" "Comment=${DESCRIPTION}"
 
 	prepgamesdirs
 }
