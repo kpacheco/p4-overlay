@@ -6,7 +6,7 @@ EAPI="2"
 
 inherit games eutils
 
-DESCRIPTION="Action RPG similar to the Legend of Zelda with randomized dungeons"
+DESCRIPTION="Action RPG similar to the Legend of Zelda"
 HOMEPAGE="http://www.bindingofisaac.com/"
 SRC_URI="binding-of-isaac_${PV}_i386.tar.gz"
 
