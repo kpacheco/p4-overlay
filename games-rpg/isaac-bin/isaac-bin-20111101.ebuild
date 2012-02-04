@@ -35,24 +35,28 @@ RDEPEND=">=media-libs/libsdl-1.2
 	app-emulation/emul-linux-x86-opengl
 	app-emulation/emul-linux-x86-sdl
 	app-emulation/emul-linux-x86-soundlibs
-	app-emulation/emul-linux-x86-xlibs )"
+	app-emulation/emul-linux-x86-xlibs 
+		)"
 
-S="${WORKDIR}"
+S=${WORKDIR}
+dir=${D}/opt/isaac
 
 pkg_nofetch() {
-	einfo "Fetch ${SRC_URI} and put it into ${DISTDIR}"
-	einfo "You can play a demo at http://www.newgrounds.com/portal/view/581168"
-	einfo "Purchase the game from http://www.humblebundle.com/"
+	elog "Fetch ${SRC_URI} and move or link it"
+	elog "to ${DISTDIR}. You can play a demo at:"
+	elog "http://www.newgrounds.com/portal/view/581168"
 }
 
 src_unpack() {
 	unpack "${A}"
 }
 
-src_install() {
-	exeinto "${GAMES_BINDIR}"
-	doexe isaac || die "doexe failed"
-	doicon "${FILESDIR}"/isaac.png
+src_install() {	
+	mkdir -p ${dir} ${D}/usr/games/bin
+	mv isaac ${dir} || die
+	ln -s ${dir}/isaac ${D}/usr/games/bin/isaac
+	doicon ${FILESDIR}/isaac.png
 	make_desktop_entry "isaac" "Binding of Isaac" "isaac" "Game;RolePlaying" "Comment=${DESCRIPTION}"
+
 	prepgamesdirs
 }
