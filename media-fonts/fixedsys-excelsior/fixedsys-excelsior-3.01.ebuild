@@ -19,6 +19,6 @@ RESTRICT="mirror strip"
 
 RDEPEND=""
 
-S="${DISTDIR}"
-FONT_S="${S}"
+S=${DISTDIR}
+FONT_S=${S}
 FONT_SUFFIX="ttf"

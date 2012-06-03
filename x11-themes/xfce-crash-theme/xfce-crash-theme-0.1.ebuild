@@ -19,9 +19,9 @@ RDEPEND="x11-themes/gtk-engines-xfce
 
 RESTRICT="binchecks mirror strip"
 
-S="${WORKDIR}"
+S=${WORKDIR}
 
 src_install() {
-	insinto "/usr/share/themes"
+	insinto /usr/share/themes
 	doins -r Xfce-crash || die
 }

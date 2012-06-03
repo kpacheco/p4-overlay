@@ -30,12 +30,12 @@ RDEPEND=">=media-libs/libsdl-1.2
 	x11-libs/libXinerama
 	x11-libs/pango[X]
 		amd64? (
-	app-emulation/emul-linux-x86-baselibs
-	app-emulation/emul-linux-x86-gtklibs
-	app-emulation/emul-linux-x86-opengl
-	app-emulation/emul-linux-x86-sdl
-	app-emulation/emul-linux-x86-soundlibs
-	app-emulation/emul-linux-x86-xlibs 
+		app-emulation/emul-linux-x86-baselibs
+		app-emulation/emul-linux-x86-gtklibs
+		app-emulation/emul-linux-x86-opengl
+		app-emulation/emul-linux-x86-sdl
+		app-emulation/emul-linux-x86-soundlibs
+		app-emulation/emul-linux-x86-xlibs
 		)"
 
 S=${WORKDIR}
@@ -48,7 +48,7 @@ pkg_nofetch() {
 }
 
 src_unpack() {
-	unpack "${A}"
+	unpack ${A}
 }
 
 src_install() {	

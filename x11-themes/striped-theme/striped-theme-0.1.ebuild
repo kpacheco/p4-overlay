@@ -8,10 +8,10 @@ DESCRIPTION="Port of Striped VS for GTK+2, Emerald, and Xfce"
 HOMEPAGE="http://lassekongo83.deviantart.com/art/Striped-GTK-and-Emerald-110989539"
 SRC_URI="http://7clams.org/distfiles/p4-overlay/Striped_GTK_and_Emerald_by_lassekongo83.7z
 	http://www.deviantart.com/download/110989539/Striped_GTK_and_Emerald_by_lassekongo83.7z
-	xfce? (
+		xfce? (
 		http://7clams.org/distfiles/p4-overlay/104275-Striped.tar.gz
 		http://xfce-look.org/CONTENT/content-files/104275-Striped.tar.gz
-	)"
+		)"
 
 LICENSE="CCPL-Attribution-ShareAlike-3.0"
 SLOT="0"
@@ -21,16 +21,16 @@ IUSE="emerald xfce"
 RDEPEND=">=x11-themes/gtk-engines-murrine-0.60.1
 	x11-libs/gdk-pixbuf
 	x11-libs/gtk+:2
-	emerald? (
+		emerald? (
 		x11-wm/emerald
-	)
-	xfce? (
+		)
+		xfce? (
 		xfce-base/xfwm4
-	)"
+		)"
 
 RESTRICT="binchecks mirror strip"
 
-S="${WORKDIR}/Striped"
+S=${WORKDIR}/Striped
 
 src_unpack() {
 	unpack Striped_GTK_and_Emerald_by_lassekongo83.7z
@@ -41,10 +41,10 @@ src_unpack() {
 
 src_install() {
 	if use emerald; then
-		insinto "/usr/share/emerald/themes/Striped"
+		insinto /usr/share/emerald/themes/Striped
 		doins ../Striped.emerald || die
 	fi
-	insinto "/usr/share/themes/Striped"
+	insinto /usr/share/themes/Striped
 	if use xfce; then
 		doins -r xfwm4 || die
 	fi
