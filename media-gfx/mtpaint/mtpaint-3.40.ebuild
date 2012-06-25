@@ -9,7 +9,7 @@ inherit eutils
 linguas="$(printf 'linguas_%s ' \
         cs de es fr gl hu it ja nl pl pt pt_BR ru sk sv tl tr zh_CH zh_TW)"
 
-DESCRIPTION=""
+DESCRIPTION="GTK+2 paint program to create pixel art and edit digital photos"
 HOMEPAGE="http://mtpaint.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 RESTRICT="mirror"
