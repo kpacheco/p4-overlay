@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer>
+  		<email>kpacheco@member.fsf.org</email>
+		<name>p4</name>
+	</maintainer>
+	<longdescription lang="en">
+		brscan-skey or scan-key-tool is a program that is intended to
+		run in the background to allow Brother multifunction devices
+		to scan directly to a PC via the "Scan to PC" menu option.
+	</longdescription>
+	<use>
+		<flag name="gimp">Enable scanning to image using GIMP</flag>
+	</use>
+</pkgmetadata>
