@@ -16,7 +16,7 @@ RESTRICT="mirror"
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="gif jpeg jpeg2k lcms nls tiff threads truetype $(printf 'linguas_%s ' ${LINGUAS})"
+IUSE="gif imagemagick jpeg jpeg2k lcms nls tiff threads truetype $(printf 'linguas_%s ' ${LINGUAS})"
 
 DEPEND=">=x11-libs/gtk+-2.6.4:2
 	>=x11-libs/pango-1.8.0
@@ -24,7 +24,10 @@ DEPEND=">=x11-libs/gtk+-2.6.4:2
 	>=media-libs/libpng-1.2.7:0
 	>=sys-libs/zlib-1.2.1
 	virtual/pkgconfig
-	gif? ( media-libs/giflib )
+	gif? ( media-libs/giflib
+		!imagemagick? ( media-gfx/gifsicle )
+		imagemagick? ( media-gfx/imagemagick )
+	)
 	jpeg? ( virtual/jpeg:0 )
 	jpeg2k? ( media-libs/jasper )
 	lcms? ( >=media-libs/lcms-1.16:0 )
@@ -41,9 +44,14 @@ src_configure () {
 		man --mandir=/usr/share/man/man1"
 
 	if use nls; then
-	# remove references to unused language files
 		myconf="${myconf} intl --localedir=/usr/share/locale"
-		sed -i -e "3c langs = ${LINGUAS}" po/Makefile
+		for h in ${LINGUAS}; do
+		# remove references to unused language files
+			if use linguas_%h; then
+				MY_LINGUAS="${MY_LINGUAS} %h"
+			fi
+		done
+		sed -i -e "3c langs = ${MY_LINGUAS}" po/Makefile
 	else
 		rm -r po
 	fi
@@ -56,14 +64,14 @@ src_configure () {
 	fi
 
 	use gif && myconf="${myconf} GIF" || myconf="${myconf} nogif"
+	use imagemagick && myconf="${myconf} imagick"
 	use jpeg && myconf="${myconf} jpeg" || myconf="${myconf} nojpeg"
 	use jpeg2k && myconf="${myconf} jasper" || myconf="${myconf} nojp2"
 	use lcms && myconf="${myconf} lcms" || myconf="${myconf} nolcms"
 	use tiff && myconf="${myconf} tiff" || myconf="${myconf} notiff"
 	use threads && myconf="${myconf} thread" || myconf="${myconf} nothread"
-#	use truetype && myconf="${myconf} ft" || myconf="${myconf} noft"
 
-	myconf="${myconf} gtk2"
+	myconf="${myconf} gtk2 release"
 
 	sh configure ${myconf} || die
 }
